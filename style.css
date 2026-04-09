@@ -2,6 +2,7 @@
    RESET BÁSICO
 ========================= */
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,6 +23,7 @@ html, body {
     --color-primario: #1E90FF;   /* Azul */
     --color-secundario: #FF6347; /* Rojo tomate */
     --color-terciario: #32CD32;  /* Verde lima */
+    --color-cuarto: #8A2BE2;     /* Violeta */
 }
 
 /* =========================
@@ -112,4 +114,15 @@ button {
 
 button:hover {
     background-color: var(--color-terciario);
+}
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--color-cuarto);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
 }

@@ -4,7 +4,136 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto Final</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* =========================
+   RESET BÁSICO
+========================= */
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Arial', sans-serif; /* Tipografía legible */
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #aa4f4f; /* Color neutro de fondo */
+    color: #333; /* Color de texto principal */
+}
+
+/* =========================
+   PALETA DE COLORES
+========================= */
+:root {
+    --color-primario: #1E90FF;   /* Azul */
+    --color-secundario: #FF6347; /* Rojo tomate */
+    --color-terciario: #32CD32;  /* Verde lima */
+    --color-cuarto: #8A2BE2;     /* Violeta */
+}
+
+/* =========================
+   ESTILOS GENERALES
+========================= */
+body {
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   CONTENEDORES
+========================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   TABLAS
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--color-primario);
+    color: #fff;
+}
+
+/* =========================
+   FORMULARIOS
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background-color: var(--color-secundario);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-terciario);
+}
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--color-cuarto);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+  </style>
 </head>
 <body>
 

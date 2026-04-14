@@ -4,208 +4,352 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto Final</title>
+
   <style>
-    /* =========================
+/* =========================
    RESET BÁSICO
 ========================= */
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html, body {
-    font-family: 'Arial', sans-serif; /* Tipografía legible */
+    font-family: 'Arial', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #da9090; /* Color neutro de fondo */
-    color: #26186c; /* Color de texto principal */
+    background-color: #da9090;
+    color: #26186c;
 }
 
 /* =========================
-   PALETA DE COLORES
+   COLORES
 ========================= */
 :root {
-    --color-primario: #385d82;   /* Azul */
-    --color-secundario: #a17d76; /* Rojo tomate */
-    --color-terciario: #3b643b;  /* Verde lima */
-    --color-cuarto: #9258c9;     /* Violeta */
+    --color-primario: #385d82;
+    --color-secundario: #a17d76;
+    --color-terciario: #3b643b;
+    --color-cuarto: #9258c9;
 }
 
 /* =========================
-   ESTILOS GENERALES
+   GENERAL
 ========================= */
 body {
     padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     color: var(--color-primario);
     margin-bottom: 15px;
 }
 
-p {
-    margin-bottom: 10px;
+/* =========================
+   NAV
+========================= */
+nav {
+    margin: 15px 0;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: bold;
 }
 
 /* =========================
-   CONTENEDORES
+   CONTENEDOR
 ========================= */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     padding: 20px;
     background-color: #7d2c2c;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* =========================
-   TABLAS
+   TABLA
 ========================= */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
 }
 
-table th, table td {
+th, td {
     border: 1px solid #ccc;
     padding: 10px;
-    text-align: left;
 }
 
-table th {
+th {
     background-color: var(--color-primario);
-    color: #fff;
+    color: white;
 }
 
 /* =========================
-   FORMULARIOS
+   FORMULARIO
 ========================= */
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    background-color: #f1f1f1;
+    gap: 10px;
+    background: #f1f1f1;
     padding: 20px;
     border-radius: 8px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+input, textarea {
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
+    border: 1px solid #ccc;
 }
 
 button {
-    background-color: var(--color-secundario);
-    color: #fff;
+    background: var(--color-secundario);
+    color: white;
+    padding: 10px;
     border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: var(--color-terciario);
+    background: var(--color-terciario);
 }
+
+/* =========================
+   ACERCA DE
+========================= */
+.acerca {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.acerca .intro {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* GRID FLEX */
+.acerca-grid {
+    display: flex;
+    gap: 15px;
+}
+
+/* TARJETAS */
+.card {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 /* =========================
    FOOTER
 ========================= */
 footer {
-    background-color: var(--color-cuarto);
-    color: #fff;
+    background: var(--color-cuarto);
+    color: white;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
-    border-radius: 8px;
+}
+
+/* =========================
+   RESPONSIVE (IMPORTANTE)
+========================= */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    /* TABLA RESPONSIVA */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+    }
+
+    /* FORMULARIO */
+    form {
+        padding: 15px;
+    }
+}@media (max-width: 600px) {
+
+    /* CONTENEDOR */
+    .container {
+        padding: 10px;
+    }
+
+    /* NAV */
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    /* TABLA RESPONSIVA */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    td {
+        padding: 5px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+    }
+
+    /* ACERCA DE RESPONSIVE */
+    .acerca-grid {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
 }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Mi Proyecto Web</h1>
-  </header>
+<header>
+  <h1>Mi Proyecto Web</h1>
+</header>
 
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Acerca de</a>
-    <a href="#">Contacto</a>
-  </nav>
+<nav>
+  <a href="#">Inicio</a>
+  <a href="#acerca">Acerca de</a>
+  <a href="#contacto">Contacto</a>
+</nav>
 
-  <main>
-    <section>
-      <h2>Lista de Estudiantes</h2>
+<main class="container">
 
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Carrera</th>
-            <th>Semestre</th>
-            <th>Promedio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>001</td>
-            <td>Ana García</td>
-            <td>Ingeniería de Software</td>
-            <td>3</td>
-            <td>8.5</td>
-          </tr>
-          <tr>
-            <td>002</td>
-            <td>Luis Pérez</td>
-            <td>Redes y Comunicaciones</td>
-            <td>4</td>
-            <td>9.0</td>
-          </tr>
-          <tr>
-            <td>003</td>
-            <td>María López</td>
-            <td>Ingeniería de Software</td>
-            <td>2</td>
-            <td>7.8</td>
-          </tr>
-          <tr>
-            <td>004</td>
-            <td>Carlos Ruiz</td>
-            <td>Sistemas de Información</td>
-            <td>5</td>
-            <td>8.2</td>
-          </tr>
-          <tr>
-            <td>005</td>
-            <td>Sofía Torres</td>
-            <td>Redes y Comunicaciones</td>
-            <td>3</td>
-            <td>9.3</td>
-          </tr>
-        </tbody>
-      </table>
+  <!-- TABLA -->
+  <section>
+    <h2>Lista de Estudiantes</h2>
 
-    </section>
-  </main>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Carrera</th>
+          <th>Semestre</th>
+          <th>Promedio</th>
+        </tr>
+      </thead>
 
-  <footer>
-    <p>Proyecto Final - Git + HTML/CSS &copy; 2025</p>
-  </footer>
+      <tbody>
+        <tr>
+          <td data-label="ID">001</td>
+          <td data-label="Nombre">Ana García</td>
+          <td data-label="Carrera">Ingeniería de Software</td>
+          <td data-label="Semestre">3</td>
+          <td data-label="Promedio">8.5</td>
+        </tr>
+
+        <tr>
+          <td data-label="ID">002</td>
+          <td data-label="Nombre">Luis Pérez</td>
+          <td data-label="Carrera">Redes</td>
+          <td data-label="Semestre">4</td>
+          <td data-label="Promedio">9.0</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section id="contacto">
+    <h2>Registro</h2>
+
+    <form>
+      <input type="text" placeholder="Nombre">
+      <input type="email" placeholder="Correo">
+      <textarea placeholder="Mensaje"></textarea>
+      <button>Enviar</button>
+    </form>
+  </section>
+
+  <!-- ACERCA DE -->
+  <section id="acerca" class="acerca">
+  <h2>Acerca de</h2>
+
+  <p class="intro">
+    Este proyecto web fue desarrollado como parte de una práctica académica
+    utilizando HTML, CSS y Flask.
+  </p>
+
+  <div class="acerca-grid">
+
+    <div class="card">
+      <h3>🎯 Objetivo</h3>
+      <p>Permitir el registro y visualización de estudiantes de forma sencilla.</p>
+    </div>
+
+    <div class="card">
+      <h3>🛠 Tecnologías</h3>
+      <p>HTML, CSS, Python (Flask) y base de datos.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Diseño</h3>
+      <p>Interfaz adaptable a celulares mediante media queries.</p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Proyecto Final - Git + HTML/CSS &copy; 2025</p>
+</footer>
 
 </body>
 </html>

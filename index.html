@@ -105,6 +105,11 @@ input, textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
+label {
+    font-weight: bold;
+    color: var(--color-primario);
+}
  
 button {
     background: var(--color-secundario);
@@ -339,10 +344,16 @@ footer {
     <h2>Registro</h2>
  
     <form>
-      <input type="text" placeholder="Nombre">
-      <input type="email" placeholder="Correo">
-      <textarea placeholder="Mensaje"></textarea>
-      <button>Enviar</button>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Nombre">
+
+      <label for="correo">Correo</label>
+      <input type="email" id="correo" placeholder="Correo">
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" placeholder="Mensaje"></textarea>
+
+      <button type="submit">Enviar</button>
     </form>
   </section>
  
@@ -380,20 +391,20 @@ footer {
     <h2>Galería</h2>
     <div class="galeria-grid">
       <div class="galeria-item">
-        <img src="https://resources.uss.cl/upload/2022/11/supervivencia-gatos-6362b9f553582.jpg" alt="Gato 1">
-        <p>🖼️ Imagen 1</p>
+        <img src="https://resources.uss.cl/upload/2022/11/supervivencia-gatos-6362b9f553582.jpg" alt="Gato atigrado recostado">
+        <p>🖼️ Gato Romano</p>
       </div>
       <div class="galeria-item">
-        <img src="https://letraslibres.com/wp-content/uploads/2023/11/gato-domestico-evolucion.jpg" alt="Gato 2">
-        <p>🖼️ Imagen 2</p>
+        <img src="https://letraslibres.com/wp-content/uploads/2023/11/gato-domestico-evolucion.jpg" alt="Gato doméstico naranja de cerca">
+        <p>🖼️ Gato Naranjoso con blanco</p>
       </div>
       <div class="galeria-item">
-        <img src="https://gatos.mascotahogar.com/Imagenes/gato-siames-de-pelo-largo.jpg" alt="Gato 3">
-        <p>🖼️ Imagen 3</p>
+        <img src="https://gatos.mascotahogar.com/Imagenes/gato-siames-de-pelo-largo.jpg" alt="Gato siamés de pelo largo">
+        <p>🖼️ Gato siamés pelo largo</p>
       </div>
       <div class="galeria-item">
-        <img src="https://misanimales.com/wp-content/uploads/2019/05/gatos-con-pelo-largo-bosque-de-siberia.jpg?auto=webp&quality=7500&width=3840&crop=16:9,smart,safe&format=webp&optimize=medium&dpr=2&fit=cover&fm=webp&q=75&w=3840&h=2160" alt="Gato 4">
-        <p>🖼️ Imagen 4</p>
+        <img src="https://misanimales.com/wp-content/uploads/2019/05/gatos-con-pelo-largo-bosque-de-siberia.jpg?auto=webp&quality=7500&width=3840&crop=16:9,smart,safe&format=webp&optimize=medium&dpr=2&fit=cover&fm=webp&q=75&w=3840&h=2160" alt="Gato del bosque de Siberia">
+        <p>🖼️ Gato romano pero largo</p>
       </div>
     </div>
   </section>
@@ -406,4 +417,3 @@ footer {
  
 </body>
 </html>
- 

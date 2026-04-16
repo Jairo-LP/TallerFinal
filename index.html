@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto Final</title>
-
+ 
   <style>
 /* =========================
    RESET BÁSICO
@@ -14,51 +14,51 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 html, body {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #da9090;
-    color: #26186c;
+    background-color: #f0e6f6;
+    color: #4a4a6a;
 }
-
+ 
 /* =========================
    COLORES
 ========================= */
 :root {
-    --color-primario: #385d82;
-    --color-secundario: #a17d76;
-    --color-terciario: #3b643b;
-    --color-cuarto: #9258c9;
+    --color-primario: #7a9cc4;
+    --color-secundario: #c4a0b0;
+    --color-terciario: #8bbfa8;
+    --color-cuarto: #b8a0d4;
 }
-
+ 
 /* =========================
    GENERAL
 ========================= */
 body {
     padding: 20px;
 }
-
+ 
 h1, h2 {
     color: var(--color-primario);
     margin-bottom: 15px;
 }
-
+ 
 /* =========================
    NAV
 ========================= */
 nav {
     margin: 15px 0;
 }
-
+ 
 nav a {
     margin-right: 15px;
     text-decoration: none;
     color: var(--color-primario);
     font-weight: bold;
 }
-
+ 
 /* =========================
    CONTENEDOR
 ========================= */
@@ -66,10 +66,10 @@ nav a {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-    background-color: #7d2c2c;
+    background-color: #faf4ff;
     border-radius: 8px;
 }
-
+ 
 /* =========================
    TABLA
 ========================= */
@@ -77,17 +77,17 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
-
+ 
 th, td {
-    border: 1px solid #ccc;
+    border: 1px solid #d9c8e8;
     padding: 10px;
 }
-
+ 
 th {
     background-color: var(--color-primario);
     color: white;
 }
-
+ 
 /* =========================
    FORMULARIO
 ========================= */
@@ -95,60 +95,66 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: #f1f1f1;
+    background: #f7f0fb;
     padding: 20px;
     border-radius: 8px;
 }
-
+ 
 input, textarea {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #d9c8e8;
 }
 
+label {
+    font-weight: bold;
+    color: var(--color-primario);
+}
+ 
 button {
     background: var(--color-secundario);
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
-
+ 
 button:hover {
     background: var(--color-terciario);
 }
-
+ 
 /* =========================
    ACERCA DE
 ========================= */
 .acerca {
     margin-top: 30px;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fefcff;
     border-radius: 8px;
 }
-
+ 
 .acerca .intro {
     text-align: center;
     margin-bottom: 15px;
 }
-
+ 
 /* GRID FLEX */
 .acerca-grid {
     display: flex;
     gap: 15px;
 }
-
+ 
 /* TARJETAS */
 .card {
     flex: 1;
-    background: #f9f9f9;
+    background: #f5eeff;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07);
 }
-
+ 
 /* =========================
    FOOTER
 ========================= */
@@ -158,121 +164,147 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 20px;
+    border-radius: 8px;
 }
-
+ 
 /* =========================
    RESPONSIVE (IMPORTANTE)
 ========================= */
 @media (max-width: 600px) {
-
+ 
     body {
         padding: 10px;
     }
-
+ 
     h1 {
         font-size: 22px;
     }
-
-    /* TABLA RESPONSIVA */
+ 
     table, thead, tbody, th, td, tr {
         display: block;
     }
-
+ 
     thead {
         display: none;
     }
-
+ 
     tr {
         margin-bottom: 15px;
         background: #fff;
         padding: 10px;
         border-radius: 8px;
     }
-
+ 
     td {
         padding: 8px;
         text-align: left;
     }
-
+ 
     td::before {
         content: attr(data-label);
         font-weight: bold;
         display: block;
     }
-
-    /* FORMULARIO */
+ 
     form {
         padding: 15px;
     }
 }@media (max-width: 600px) {
-
-    /* CONTENEDOR */
+ 
     .container {
         padding: 10px;
     }
-
-    /* NAV */
+ 
     nav a {
         display: block;
         margin: 5px 0;
     }
-
-    /* TABLA RESPONSIVA */
+ 
     table, thead, tbody, th, td, tr {
         display: block;
     }
-
+ 
     thead {
         display: none;
     }
-
+ 
     tr {
         margin-bottom: 10px;
         background: #fff;
         padding: 10px;
         border-radius: 8px;
     }
-
+ 
     td {
         padding: 5px;
     }
-
+ 
     td::before {
         content: attr(data-label);
         font-weight: bold;
         display: block;
     }
-
-    /* ACERCA DE RESPONSIVE */
+ 
     .acerca-grid {
         flex-direction: column;
     }
-
+ 
     .card {
         margin-bottom: 10px;
     }
 }
+
+/* =========================
+   GALERÍA / GRID
+========================= */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.galeria-item {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.galeria-item p {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
   </style>
 </head>
-
+ 
 <body>
-
+ 
 <header>
   <h1>Mi Proyecto Web</h1>
 </header>
-
+ 
 <nav>
   <a href="#">Inicio</a>
   <a href="#acerca">Acerca de</a>
   <a href="#contacto">Contacto</a>
 </nav>
-
+ 
 <main class="container">
-
+ 
   <!-- TABLA -->
   <section>
     <h2>Lista de Estudiantes</h2>
-
+ 
     <table>
       <thead>
         <tr>
@@ -283,7 +315,7 @@ footer {
           <th>Promedio</th>
         </tr>
       </thead>
-
+ 
       <tbody>
         <tr>
           <td data-label="ID">001</td>
@@ -292,7 +324,7 @@ footer {
           <td data-label="Semestre">3</td>
           <td data-label="Promedio">8.5</td>
         </tr>
-
+ 
         <tr>
           <td data-label="ID">002</td>
           <td data-label="Nombre">Luis Pérez</td>
@@ -303,53 +335,84 @@ footer {
       </tbody>
     </table>
   </section>
-
+ 
   <!-- FORMULARIO -->
   <section id="contacto">
     <h2>Registro</h2>
-
+ 
     <form>
-      <input type="text" placeholder="Nombre">
-      <input type="email" placeholder="Correo">
-      <textarea placeholder="Mensaje"></textarea>
-      <button>Enviar</button>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Nombre">
+
+      <label for="correo">Correo</label>
+      <input type="email" id="correo" placeholder="Correo">
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" placeholder="Mensaje"></textarea>
+
+      <button type="submit">Enviar</button>
     </form>
   </section>
+ 
 
   <!-- ACERCA DE -->
   <section id="acerca" class="acerca">
   <h2>Acerca de</h2>
-
+ 
   <p class="intro">
     Este proyecto web fue desarrollado como parte de una práctica académica
     utilizando HTML, CSS y Flask.
   </p>
-
+ 
   <div class="acerca-grid">
-
+ 
     <div class="card">
       <h3>🎯 Objetivo</h3>
       <p>Permitir el registro y visualización de estudiantes de forma sencilla.</p>
     </div>
-
+ 
     <div class="card">
       <h3>🛠 Tecnologías</h3>
       <p>HTML, CSS, Python (Flask) y base de datos.</p>
     </div>
-
+ 
     <div class="card">
       <h3>📱 Diseño</h3>
       <p>Interfaz adaptable a celulares mediante media queries.</p>
     </div>
-
+ 
   </div>
 </section>
-
+ 
+  <!-- GALERÍA/GRID -->
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria-grid">
+      <div class="galeria-item">
+        <img src="https://resources.uss.cl/upload/2022/11/supervivencia-gatos-6362b9f553582.jpg" alt="Gato atigrado recostado">
+        <p>🖼️ Gato Romano</p>
+      </div>
+      <div class="galeria-item">
+        <img src="https://letraslibres.com/wp-content/uploads/2023/11/gato-domestico-evolucion.jpg" alt="Gato doméstico naranja de cerca">
+        <p>🖼️ Gato Naranjoso con blanco</p>
+      </div>
+      <div class="galeria-item">
+        <img src="https://gatos.mascotahogar.com/Imagenes/gato-siames-de-pelo-largo.jpg" alt="Gato siamés de pelo largo">
+        <p>🖼️ Gato siamés pelo largo</p>
+      </div>
+      <div class="galeria-item">
+        <img src="https://misanimales.com/wp-content/uploads/2019/05/gatos-con-pelo-largo-bosque-de-siberia.jpg?auto=webp&quality=7500&width=3840&crop=16:9,smart,safe&format=webp&optimize=medium&dpr=2&fit=cover&fm=webp&q=75&w=3840&h=2160" alt="Gato del bosque de Siberia">
+        <p>🖼️ Gato romano pelo largo</p>
+      </div>
+    </div>
+  </section>
+ 
+  
 </main>
-
+ 
 <footer>
   <p>Proyecto Final - Git + HTML/CSS &copy; 2025</p>
 </footer>
-
+ 
 </body>
 </html>

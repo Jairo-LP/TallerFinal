@@ -69,7 +69,7 @@ table th, table td {
 }
 
 table th {
-    background-color: var(--color-primario);
+    background-color: #e63946;
     color: #fff;
 }
 
